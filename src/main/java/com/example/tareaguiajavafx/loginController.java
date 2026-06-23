@@ -1,9 +1,14 @@
 package com.example.tareaguiajavafx;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class loginController {
 
@@ -25,7 +30,7 @@ public class loginController {
 
     //Iniciar Sesion
     @FXML
-    private void inicioSesion() {
+    private void inicioSesion() throws IOException {
 
         String usuarioIngresado = txtUsuario.getText().trim();
         String passwordIngresado = txtPassword.getText().trim();
@@ -47,6 +52,14 @@ public class loginController {
             alerta.setContentText("Bienvenido al sistema.");
             alerta.showAndWait();
             // Abrir la ventana CRUD
+
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("crud.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+            Stage stage = (Stage) btnValidar.getScene().getWindow();
+            stage.setTitle("CRUD");
+            stage.setScene(scene);
+            stage.show();
+
         } else {
             Alert alerta = new Alert(Alert.AlertType.ERROR);
             alerta.setTitle("Error de acceso");

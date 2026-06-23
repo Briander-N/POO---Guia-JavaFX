@@ -1,6 +1,7 @@
 module com.example.tareaguiajavafx {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
 
     opens com.example.tareaguiajavafx to javafx.fxml;

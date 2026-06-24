@@ -42,7 +42,7 @@
 
         <Button fx:id="btnGuardar" layoutX="420.0" layoutY="70.0" onAction="#guardar" text="Guardar" />
 
-        <Button fx:id="btnActualizar" layoutX="420.0" layoutY="110.0" text="Actualizar" />
+        <Button fx:id="btnActualizar" layoutX="420.0" layoutY="110.0" onAction="#actualizar" text="Actualizar" />
 
         <Button fx:id="btnEliminar" layoutX="420.0" layoutY="150.0" text="Eliminar" />
 

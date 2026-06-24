@@ -44,7 +44,7 @@
 
         <Button fx:id="btnActualizar" layoutX="420.0" layoutY="110.0" onAction="#actualizar" text="Actualizar" />
 
-        <Button fx:id="btnEliminar" layoutX="420.0" layoutY="150.0" text="Eliminar" />
+        <Button fx:id="btnEliminar" layoutX="420.0" layoutY="150.0" onAction="#eliminar" text="Eliminar" />
 
         <Button fx:id="btnLimpiar" layoutX="420.0" layoutY="190.0" text="Limpiar" />
 

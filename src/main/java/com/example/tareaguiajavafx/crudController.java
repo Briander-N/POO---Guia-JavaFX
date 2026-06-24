@@ -380,7 +380,41 @@ public class crudController {
 
     @FXML
     private void eliminar(){
+        Alert confirmacion =
+                new Alert(Alert.AlertType.CONFIRMATION);
 
+        confirmacion.setTitle("Eliminar");
+
+        confirmacion.setHeaderText(null);
+
+        confirmacion.setContentText(
+                "¿Desea eliminar este participante?");
+
+        if(confirmacion.showAndWait().get() != ButtonType.OK){
+            return;
+        }
+
+        try{
+            Connection con = Conexion.getConexion();
+            String sql = "DELETE FROM participante WHERE id=?";
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ps.setInt(1, idSeleccionado);
+            ps.executeUpdate();
+
+            Alert alerta =
+                    new Alert(Alert.AlertType.INFORMATION);
+
+            alerta.setContentText(
+                    "Participante eliminado");
+
+            alerta.showAndWait();
+            leer();
+
+        }catch (Exception e){
+
+            e.printStackTrace();
+        }
     }
 
 

@@ -11,7 +11,6 @@ public class Participante {
     private String estadoCivil;
     private String jornada;
     private String categoria;
-
     public Participante(int id,
                         String cedula,
                         String nombre,
@@ -21,7 +20,6 @@ public class Participante {
                         String estadoCivil,
                         String jornada,
                         String categoria) {
-
         this.id = id;
         this.cedula = cedula;
         this.nombre = nombre;

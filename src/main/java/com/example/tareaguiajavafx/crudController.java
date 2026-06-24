@@ -2,6 +2,7 @@ package com.example.tareaguiajavafx;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class crudController {
 
@@ -16,7 +17,7 @@ public class crudController {
     @FXML
     private TextField txtEdad;
     @FXML
-    private TextField txtObservaciones;
+    private TextArea txtObservaciones;
 
     //Combo Box
     @FXML
@@ -51,7 +52,7 @@ public class crudController {
     private ToggleGroup grupoJornada;
 
     @FXML
-    public void ToggleGroup(){
+    public void configurarToggleGroup(){
         grupoJornada = new ToggleGroup();
         rbMatutina.setToggleGroup(grupoJornada);
         rbVespertina.setToggleGroup(grupoJornada);
@@ -81,9 +82,37 @@ public class crudController {
     @FXML
     private TableColumn<Participante,String> colCategoria;
 
+    @FXML
+    public void inicializarColumnas(){
+        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
 
+        colCedula.setCellValueFactory(new PropertyValueFactory<>("cedula"));
 
+        colNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
 
+        colApellido.setCellValueFactory(new PropertyValueFactory<>("apellido"));
+
+        colEdad.setCellValueFactory(new PropertyValueFactory<>("edad"));
+
+        colCorreo.setCellValueFactory(new PropertyValueFactory<>("correo"));
+
+        colEstadoCivil.setCellValueFactory(new PropertyValueFactory<>("estadoCivil"));
+
+        colJornada.setCellValueFactory(new PropertyValueFactory<>("jornada"));
+
+        colCategoria.setCellValueFactory(new PropertyValueFactory<>("categoria"));
+    }
+
+    //Metodo initialize
+    public void initialize(){
+
+        llenarComboBox();
+        configurarToggleGroup();
+        inicializarColumnas();
+
+    }
+
+    //METODOS DEL CRUD
 
 
 

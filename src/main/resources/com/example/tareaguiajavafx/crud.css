@@ -1,0 +1,64 @@
+.root{
+    -fx-background-color: #f8f9fa;
+}
+
+.label{
+    -fx-font-weight: bold;
+}
+
+.text-field,
+.combo-box,
+.text-area{
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+.button{
+    -fx-background-radius: 8;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.guardar-btn{
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+}
+
+.guardar-btn:hover{
+    -fx-background-color: #219150;
+}
+
+.actualizar-btn{
+    -fx-background-color: #f39c12;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+}
+
+.actualizar-btn:hover{
+    -fx-background-color: #d68910;
+}
+
+.eliminar-btn{
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+}
+
+.eliminar-btn:hover{
+    -fx-background-color: #c0392b;
+}
+
+.limpiar-btn{
+    -fx-background-color: #7f8c8d;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+}
+
+.limpiar-btn:hover{
+    -fx-background-color: #616a6b;
+}

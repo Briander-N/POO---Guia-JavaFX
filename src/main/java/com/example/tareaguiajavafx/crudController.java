@@ -418,5 +418,28 @@ public class crudController {
     }
 
 
+    @FXML
+    private void limpiar(){
+
+        txtCedula.clear();
+        txtNombre.clear();
+        txtApellido.clear();
+        txtEdad.clear();
+        txtCorreo.clear();
+        txtObservaciones.clear();
+
+        cbEstadoCivil.setValue(null);
+        cbCategoria.setValue(null);
+
+        rbMatutina.setSelected(false);
+        rbVespertina.setSelected(false);
+        rbNocturna.setSelected(false);
+
+        tblParticipantes.getSelectionModel().clearSelection();
+
+        idSeleccionado = -1;
+    }
+
+
 
 }

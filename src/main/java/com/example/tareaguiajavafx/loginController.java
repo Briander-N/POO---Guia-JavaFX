@@ -54,7 +54,7 @@ public class loginController {
             // Abrir la ventana CRUD
 
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("crud.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+            Scene scene = new Scene(fxmlLoader.load(), 500, 500);
             Stage stage = (Stage) btnValidar.getScene().getWindow();
             stage.setTitle("CRUD");
             stage.setScene(scene);

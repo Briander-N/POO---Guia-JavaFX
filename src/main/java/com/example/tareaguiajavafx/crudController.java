@@ -17,6 +17,8 @@ public class crudController {
     @FXML
     private TextField txtEdad;
     @FXML
+    private TextField txtCorreo;
+    @FXML
     private TextArea txtObservaciones;
 
     //Combo Box
@@ -114,7 +116,28 @@ public class crudController {
 
     //METODOS DEL CRUD
 
+    @FXML
+    private void guardar() {
+        String cedula = txtCedula.getText();
+        String nombre = txtNombre.getText();
+        String apellido = txtApellido.getText();
+        String edadTexto = txtEdad.getText();
+        String correo = txtCorreo.getText();
 
+        String estadoCivil = cbEstadoCivil.getValue().toString();
+        String jornada = "";
+        if(rbMatutina.isSelected()){
+            jornada="Matutina";
+        }
+        if(rbVespertina.isSelected()) {
+            jornada = "Vespertina";
+        }
+        if(rbNocturna.isSelected()) {
+            jornada = "Nocturna";
+        }
+        String categoria = cbCategoria.getValue().toString();
+
+    }
 
 
 }
